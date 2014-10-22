@@ -1,0 +1,5 @@
+remedy_library:
+    resource: "@RemedyLibraryBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

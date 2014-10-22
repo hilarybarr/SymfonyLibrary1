@@ -1,0 +1,4 @@
+
+_library:
+    resource: "@RemedyBundle/Controller/DefaultController.php"
+    type:     annotation
