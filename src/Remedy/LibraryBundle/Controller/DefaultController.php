@@ -23,30 +23,16 @@ use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Remedy\LibraryBundle\Document\Book;
 
 
-//
-//$encoders = array(new XmlEncoder(), new JsonEncoder());
-//$normalizers = array(new GetSetMethodNormalizer());
-//
-//$serializer = new Serializer($normalizers, $encoders);
-
 
 class DefaultController extends Controller
 
 
 {
-    /**
-     * @Route("/hey/{person}")
-     * @Template()
-     */
-    public function indexAction($person)
-    {
-        return array('person' => $person);
-    }
 
-
+//NEED TO SPECIFY POST METHOD
     /**
      * @Route("/create")
-     * @Template()
+     *
      */
     public function createAction(Request $request)
 
@@ -73,24 +59,9 @@ class DefaultController extends Controller
 
 
     }
-////        $book = new Book();
-////        $book->setTitle('Book2');
-////        $book->setAuthor('Bestauthor');
-////        $book->setPrice('20.99');
-////        $book->setQuantity('30');
-//
-//        $dm = $this->get('doctrine_mongodb')->getManager();
-//        $dm->persist($book);
-//        $dm->flush();
-//
-//        return new Response('Created book id '.$book->getId());
-//    }
-
 
     /**
      * @Route("/show")
-     * @Template()
-     * @return JsonResponse
      */
     public function showAction()
     {
@@ -104,22 +75,15 @@ class DefaultController extends Controller
         $response->headers->set("Access-Control-Allow-Origin", "*");
         $response->headers->set('Content-Type', 'application/json');
         return $response;
-
-
-//        $books = array(
-////            array(
-////                "id"=>"54482e352c1be7353e0041a7",
-////                "title"=>"A Foo Bar",
-////                //"author":"Coolauthor","price":19.99,"quantity":30
-////            ),
-////
-////        );
-
-
-        //echo $books; // thinks books is an array...how do I convert this to JSON? If I use the following, says it's non-object
-
-
     }
+
+
+
+
+
+
+
+
 
 
     public function updateAction($id)

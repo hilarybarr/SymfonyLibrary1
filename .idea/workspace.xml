@@ -28,8 +28,8 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Remedy/LibraryBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6899841" vertical-offset="586" max-vertical-offset="3240">
-              <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+            <state vertical-scroll-proportion="-0.59618443" vertical-offset="915" max-vertical-offset="2700">
+              <caret line="36" column="49" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="49" />
               <folding>
                 <element signature="e#51#108#0#PHP" expanded="true" />
               </folding>
@@ -50,8 +50,8 @@
       <file leaf-file-name="dev.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9075" max-vertical-offset="9990">
-              <caret line="608" column="141" selection-start-line="608" selection-start-column="141" selection-end-line="608" selection-end-column="141" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="15495" max-vertical-offset="16410">
+              <caret line="1036" column="141" selection-start-line="1036" selection-start-column="141" selection-end-line="1036" selection-end-column="141" />
               <folding />
             </state>
           </provider>
@@ -131,8 +131,8 @@
   <component name="PhpDebugGeneral" break_at_first_line="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1703" />
-    <option name="y" value="113" />
+    <option name="x" value="1504" />
+    <option name="y" value="74" />
     <option name="width" value="1314" />
     <option name="height" value="799" />
   </component>
@@ -556,7 +556,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1703" y="113" width="1314" height="799" extended-state="0" />
+    <frame x="1504" y="74" width="1314" height="799" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -990,8 +990,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9075" max-vertical-offset="9990">
-          <caret line="608" column="141" selection-start-line="608" selection-start-column="141" selection-end-line="608" selection-end-column="141" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="15495" max-vertical-offset="16410">
+          <caret line="1036" column="141" selection-start-line="1036" selection-start-column="141" selection-end-line="1036" selection-end-column="141" />
           <folding />
         </state>
       </provider>
@@ -1008,8 +1008,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Remedy/LibraryBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6899841" vertical-offset="586" max-vertical-offset="3240">
-          <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+        <state vertical-scroll-proportion="-0.59618443" vertical-offset="915" max-vertical-offset="2700">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="49" />
           <folding>
             <element signature="e#51#108#0#PHP" expanded="true" />
           </folding>
