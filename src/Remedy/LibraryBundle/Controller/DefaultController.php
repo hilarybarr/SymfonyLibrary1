@@ -23,7 +23,6 @@ use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Remedy\LibraryBundle\Document\Book;
 
 
-
 //
 //$encoders = array(new XmlEncoder(), new JsonEncoder());
 //$normalizers = array(new GetSetMethodNormalizer());
@@ -31,13 +30,7 @@ use Remedy\LibraryBundle\Document\Book;
 //$serializer = new Serializer($normalizers, $encoders);
 
 
-
-
-
-
 class DefaultController extends Controller
-
-
 
 
 {
@@ -51,28 +44,47 @@ class DefaultController extends Controller
     }
 
 
-
-
     /**
      * @Route("/create")
      * @Template()
      */
-    public function createAction()
+    public function createAction(Request $request)
+
     {
-//        $book = new Book();
-//        $book->setTitle('Book2');
-//        $book->setAuthor('Bestauthor');
-//        $book->setPrice('20.99');
-//        $book->setQuantity('30');
+        $in = json_decode($request->getContent());
+
+
+        $book = new Book();
+        $book->title = ($in->title);
+        $book->author=($in->author);
+        $book->price=($in->price);
+        $book->quantity=($in->quantity);
 
         $dm = $this->get('doctrine_mongodb')->getManager();
         $dm->persist($book);
         $dm->flush();
 
-        return new Response('Created book id '.$book->getId());
+
+        $response = new Response;
+        $response->setContent($request->getContent());
+        $response->headers->set("Access-Control-Allow-Origin", "*");
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+
+
     }
-
-
+////        $book = new Book();
+////        $book->setTitle('Book2');
+////        $book->setAuthor('Bestauthor');
+////        $book->setPrice('20.99');
+////        $book->setQuantity('30');
+//
+//        $dm = $this->get('doctrine_mongodb')->getManager();
+//        $dm->persist($book);
+//        $dm->flush();
+//
+//        return new Response('Created book id '.$book->getId());
+//    }
 
 
     /**
@@ -94,7 +106,6 @@ class DefaultController extends Controller
         return $response;
 
 
-
 //        $books = array(
 ////            array(
 ////                "id"=>"54482e352c1be7353e0041a7",
@@ -105,17 +116,10 @@ class DefaultController extends Controller
 ////        );
 
 
-
         //echo $books; // thinks books is an array...how do I convert this to JSON? If I use the following, says it's non-object
 
 
-
-
     }
-
-
-
-
 
 
     public function updateAction($id)
@@ -144,9 +148,6 @@ class DefaultController extends Controller
     }
 
 
-
-
-
     /**
      * @Route("/list")
      * @Template()
@@ -156,11 +157,11 @@ class DefaultController extends Controller
 
     {
         $books = array(
-            ['title' => 'JavaScript for Dummies', 'author' => 'Remedy Partners', 'price'=> 1.50, 'quantity' => 2] ,
-            ['title' => 'The Raven', 'author'=>'Edgar Allan Poe', 'price'=> 3.76, 'quantity' => 5],
-            ['title' => 'PHP is Awesome', 'author'=>'Max', 'price'=> 4.00, 'quantity' => 1],
-            ['title' => 'Home', 'author'=>'Jodi Picoult', 'price'=> 3.76, 'quantity' => 10],
-            ['title' => 'The Scarlet Letter', 'author'=>'Nathaniel Hawthorne', 'price'=> 6.00, 'quantity' => 1]
+            ['title' => 'JavaScript for Dummies', 'author' => 'Remedy Partners', 'price' => 1.50, 'quantity' => 2],
+            ['title' => 'The Raven', 'author' => 'Edgar Allan Poe', 'price' => 3.76, 'quantity' => 5],
+            ['title' => 'PHP is Awesome', 'author' => 'Max', 'price' => 4.00, 'quantity' => 1],
+            ['title' => 'Home', 'author' => 'Jodi Picoult', 'price' => 3.76, 'quantity' => 10],
+            ['title' => 'The Scarlet Letter', 'author' => 'Nathaniel Hawthorne', 'price' => 6.00, 'quantity' => 1]
         );
         $response = new Response;
         $response->setContent(json_encode($books));
