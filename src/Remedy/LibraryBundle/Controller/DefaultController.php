@@ -23,7 +23,6 @@ class DefaultController extends Controller
 
 {
 
-
     /**
      * @Route("/show")
      */
@@ -43,7 +42,7 @@ class DefaultController extends Controller
 
 
 
-//NEED TO SPECIFY POST METHOD
+//NEED TO SPECIFY POST @METHOD
     /**
      * @Route("/create")
      *
@@ -76,7 +75,7 @@ class DefaultController extends Controller
 
 
 
-//
+//NEED TO SPECIFY DELETE @METHOD
     /**
      * @Route("/delete/{id}")
      */
@@ -90,20 +89,54 @@ class DefaultController extends Controller
     }
 
 
-//
-//
-//
-//
-//    public function updateAction($id)
-//    {
-//        $dm = $this->get('doctrine_mongodb')->getManager();
-//        $book = $dm->getRepository('RemedyLibraryBundle:Book')->find($id);
-//
-//
-//        $dm->remove($product);
-//        $dm->flush();
-//
-//        return $this->redirect($this->generateUrl('show'));
-//    }
 
+
+//NEED TO SPECIFY UPDATE @METHOD
+    /**
+     * @Route("/update/{id}")
+     */
+    public function updateAction(Request $request)
+    {
+
+        $in = json_decode($request->getContent());
+
+
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $book = $dm->getRepository('RemedyLibraryBundle:Book')->find($in->id);
+        $book->title = ($in->title);
+        $book->author = ($in->author);
+        $book->price = ($in->price);
+        $book->quantity = ($in->quantity);
+
+        $dm->persist($book);
+        $dm->flush();
+
+
+        $response = new Response;
+        $response->setContent($in);
+        $response->headers->set("Access-Control-Allow-Origin", "*");
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+    }
 }
+
+
+
+
+//ADDING AN INCREMENTING INDEX IN MONGO..For some reason the id wasn't accessible to Angular at first but then it was
+//so an index wasn't needed.
+//// first time
+//bookIndex = 0;
+//db.Book.find().forEach(
+//function(curBook){
+//    db.Book.update({_id:curBook._id}, {$set:{ index: bookIndex}})
+//		++bookIndex;
+//
+//	}
+//)
+//
+//
+//// new insert
+//lastBook = db.Book.find().sort({_id:-1}).limit(1);
+//numBooks = db.Book.find().count();
+//db.Book.update({_id:lastBook._id}, {$set:{ index: numBooks}})

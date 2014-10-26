@@ -28,9 +28,11 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Remedy/LibraryBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3608903" vertical-offset="1081" max-vertical-offset="1710">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.5484897" vertical-offset="0" max-vertical-offset="2205">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding>
+                <element signature="e#51#108#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +50,8 @@
       <file leaf-file-name="dev.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="111990" max-vertical-offset="112890">
-              <caret line="7466" column="78" selection-start-line="7466" selection-start-column="78" selection-end-line="7466" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="66765" max-vertical-offset="72255">
+              <caret line="4464" column="75" selection-start-line="4464" selection-start-column="75" selection-end-line="4464" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -129,8 +131,8 @@
   <component name="PhpDebugGeneral" break_at_first_line="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-134" />
-    <option name="y" value="22" />
+    <option name="x" value="-43" />
+    <option name="y" value="518" />
     <option name="width" value="1440" />
     <option name="height" value="799" />
   </component>
@@ -554,7 +556,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-134" y="22" width="1440" height="799" extended-state="0" />
+    <frame x="-43" y="518" width="1440" height="799" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -627,7 +629,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3390">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,7 +689,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2955">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -719,7 +725,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -788,7 +796,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1365">
           <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +834,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +844,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1365">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -991,17 +1005,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111990" max-vertical-offset="112890">
-          <caret line="7466" column="78" selection-start-line="7466" selection-start-column="78" selection-end-line="7466" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="66765" max-vertical-offset="72255">
+          <caret line="4464" column="75" selection-start-line="4464" selection-start-column="75" selection-end-line="4464" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Remedy/LibraryBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3608903" vertical-offset="1081" max-vertical-offset="1710">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.5484897" vertical-offset="0" max-vertical-offset="2205">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#51#108#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
