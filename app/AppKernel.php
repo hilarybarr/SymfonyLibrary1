@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Remedy\LibraryBundle\RemedyLibraryBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
             new FOS\RestBundle\FOSRestBundle()
 
 

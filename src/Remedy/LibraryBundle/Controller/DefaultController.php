@@ -33,9 +33,10 @@ class DefaultController extends Controller
             ->getRepository('RemedyLibraryBundle:Book');
 
         $books = $repository->findAll();
-        $response = new Response;
+        $response = new Response();
         $response->setContent(json_encode($books));
         $response->headers->set("Access-Control-Allow-Origin", "*");
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, HEAD, OPTIONS");
         $response->headers->set('Content-Type', 'application/json');
         return $response;
     }
@@ -45,7 +46,6 @@ class DefaultController extends Controller
 //NEED TO SPECIFY POST @METHOD
     /**
      * @Route("/create")
-     *
      */
     public function createAction(Request $request)
 
@@ -64,7 +64,7 @@ class DefaultController extends Controller
         $dm->flush();
 
 
-        $response = new Response;
+        $response = new Response();
         $response->setContent($request->getContent());
         $response->headers->set("Access-Control-Allow-Origin", "*");
         $response->headers->set('Content-Type', 'application/json');
@@ -79,13 +79,21 @@ class DefaultController extends Controller
     /**
      * @Route("/delete/{id}")
      */
-    public function deleteAction($id)
+    public function deleteAction(Request $request)
     {
+        $in = $request->getContent();
         $dm = $this->get('doctrine_mongodb')->getManager();
-        $book = $dm->getRepository('RemedyLibraryBundle:Book')->find($id);
+        $book = $dm->getRepository('RemedyLibraryBundle:Book')->find($in);
 
         $dm->remove($book);
         $dm->flush();
+
+        $response = new Response();
+        $response->setContent("Successfully deleted a book");
+        $response->headers->set("Access-Control-Allow-Origin", "*");
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, HEAD, OPTIONS");
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
     }
 
 
@@ -97,7 +105,6 @@ class DefaultController extends Controller
      */
     public function updateAction(Request $request)
     {
-
         $in = json_decode($request->getContent());
 
 
@@ -112,11 +119,13 @@ class DefaultController extends Controller
         $dm->flush();
 
 
-        $response = new Response;
-        $response->setContent($in);
+        $response = new Response();
+        $response->setContent("Successfully updated a book.");
         $response->headers->set("Access-Control-Allow-Origin", "*");
+        $response->headers->set("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, HEAD, OPTIONS");
         $response->headers->set('Content-Type', 'application/json');
         return $response;
+
     }
 }
 
